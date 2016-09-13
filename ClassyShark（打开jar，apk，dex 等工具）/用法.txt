@@ -1,0 +1,2 @@
+cmdÀïÖ´ĞĞÃüÁî£º
+java -jar ClassyShark.jar

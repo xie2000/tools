@@ -1,0 +1,26 @@
+import com.google.protobuf.InvalidProtocolBufferException;
+
+public class PBNAMEPackage extends QuotePackageImpl {
+	private PBNAME_Reply mReply = null;
+
+	public PBNAMEPackage(DataHeadImpl head) {
+		super(head);
+	}
+
+	@Override
+	public boolean readData(byte[] data, int arg1, int arg2) {
+		try {
+			mReply = PBNAME_Reply.parseFrom(data);
+		} catch (InvalidProtocolBufferException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+
+	public PBNAME_Reply getResponse() {
+		return mReply;
+	}
+
+}

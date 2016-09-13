@@ -1,0 +1,4 @@
+1.把proto文件复制到当前文件夹，运行createJava.bat则生成java文件
+
+2.复制create_java_package_class.py，TemplatePackage.data复制到生成java文件夹里，运行create_java_package_class.py则能生成package文件
+

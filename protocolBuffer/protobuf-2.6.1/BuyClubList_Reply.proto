@@ -1,0 +1,20 @@
+package quote;
+option java_package = "";
+
+option optimize_for = LITE_RUNTIME;
+message BuyClubList_Reply {
+	message GroupData{
+		required uint32 group_id = 1 ;//组合代码
+		required int32 state = 2 ;//1:推荐  2:new  3:hot  0:无  
+		repeated string rep_field_value = 3 ; //字段具体行情值，按回复字段顺序来
+	} 
+	required int32 class_type = 4; // 0:正常排序列表  1:"我的组合"
+	repeated int32 rep_fields = 5 [packed=true] ;	 //回复字段顺序
+	repeated GroupData group_list = 6 ; //group内容列表
+	required uint32 rep_begin = 7 ;//起始位置
+	required uint32 total_size= 8 ; //总大小
+	required int32 	sort_field = 9 ;	//请求的排序字段
+	required bool 	sort_order = 10 ; 	//请求的升降序
+	required string icon_url_pre = 11; //组合图片URL前缀
+	optional uint32 req_flag = 12; //请求标识符
+}

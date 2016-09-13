@@ -1,0 +1,8 @@
+在E:\工具\protocolBuffer\protobuf-2.6.1\protobuf-2.6.1下打开命令行，执行下列命令：
+
+
+protoc --proto_path=IMPORT_PATH --cpp_out=DST_DIR --java_out=DST_DIR --python_out=DST_DIR path/to/file.proto
+
+1.IMPORT_PATH,放protocl文件的文件夹
+2.DST_DIR 生成文件的文件夹
+3.要去生成的proto文件，全路径(这个文件夹下的proto文件全部批量生成：path/*.proto)

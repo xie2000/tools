@@ -1,0 +1,39 @@
+package quote;
+option java_package = "";
+
+option optimize_for = LITE_RUNTIME;
+message BuyClubList_Request {
+	required int32 class_type = 1; // 0: 请求正常排序列表   1:请求"我的"  2:请求推荐  3:请求定制数据  4:请求大师数据  5.某老师创建的组合
+	repeated int32 req_fields = 2 [packed=true]; //字段列表 定义如//$$$$$$$$$$$$$$$$$$：
+	required int32 sort_field = 3 ; //排序字段 -9999为无排序字段，
+	required bool sort_order = 4;  //升序或降序，true为降序 ， false为升序
+	required uint32 req_begin = 5; //请求起始位置，初始填0（排序后）
+	required uint32 req_size = 6;  //请求个数，按客户端显示分页大小
+				       //正数为请求 begin+1 到begin+size
+				       //负数为请求 begin-1 到begin-size || 0
+	optional uint32 req_flag = 7; // 请求标识符,服务器原值传回
+	optional uint64 user_id = 8 [default = 0]; // 查询创建的组合的用户id， class_type为5时使用
+}
+
+
+
+
+//$$$$$$$$$$$$$$$$$$
+
+//	FIELD_NAME = 1; // 组合名称
+//	FIELD_DAY_INCOME = 2; // 日收益 x%
+//	FIELD_WEEK_INCOME = 3; // 周收益 x%
+//	FIELD_MONTH_INCOME = 4; // 月收益 x%
+//	FIELD_TOTAL_INCOME = 5; // 总收益 x%
+//	FIELD_CREATE_TIME = 6;// 创建时间
+//	FIELD_CREATOR = 7; // 创建者
+//	FIELD_FOCUS = 8; // 关注数
+//	FIELD_PRAISE = 9; // 好评数
+//	FIELD_MINE_TYPE = 10; // 我的组合类型：类型（1：创建 2：购买 3：关注 4：推荐）
+//	FIELD_MINE_TYPE = 11; //是否为老师创建的组合 0 表示 false 1 表示 true
+
+
+//备注:
+//当class_type为 1 时,sort_field, sorttype , begin, recommend无意义
+
+

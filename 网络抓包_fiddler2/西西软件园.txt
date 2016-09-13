@@ -1,0 +1,3 @@
+06-30 15:35:06.761: I/System.out(28543): ********************rect:Rect(0, 75 - 1080, 996),rootInvisibleHeight:924,location:1185,srollHeight:339
+06-30 15:35:17.356: I/System.out(28543): ********************rect:Rect(0, 75 - 1080, 996),rootInvisibleHeight:924,location:1185,srollHeight:339
+06-30 15:35:20.511: I/System.out(28543): ********************rect:Rect(0, 75 - 1080, 996),rootInvisibleHeight:924,location:1185,srollHeight:339
