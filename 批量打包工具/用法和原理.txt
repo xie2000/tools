@@ -1,0 +1,22 @@
+原理：
+https://github.com/mcxiaoke/packer-ng-plugin
+
+
+当前目录运行此命令：
+
+python PackerNg-1.0.7.py release路径 渠道文件路径 生成结果文件路径
+备注：
+1.编译器生成的realease.apk
+
+2.渠道文件路径，是个txt文件 ，格式如下
+  1-百度手机助手#注释
+	2-91助手
+	3-安卓市场
+	4-安智市场
+	5-机锋市场
+
+
+
+python PackerNg-1.0.7.py E:\workspaceas\stockmaster\trunk\app\build\outputs\apk\app-emoney-release.apk E:\workspaceas\stockmaster\cer\channelId.txt E:\workspaceas\stockmaster\cer\apk
+
+
